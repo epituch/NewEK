@@ -1,15 +1,17 @@
 public class Player {
 
+
     private static PlayerHand playerHand;
     private static int playerNum;
     private static int turnsRemaining;
     private static int nextPlayerTurns;
 
-    public Player(int t, Deck d) {
+    public Player(int t, Deck d, String Name) {
         playerNum = t;
         ph = new PlayerHand(d);
         nextPlayerTurns = 1;
         isDead = false;
+        pName = Name;
     }
 
     public int getPlayerNum() {
@@ -35,10 +37,11 @@ public class Player {
     public void attack() {
         turnsRemaining--;
 
-        if (getTurnsRemaining() % 2 == 1) {
+        if (getNextPlayerTurns() % 2 == 1) {
             nextPlayerTurns++;
         } else {
             nextPlayerTurns += 2;
+            System.out.println("added 2 = bad");
         }
     }
 
@@ -57,7 +60,10 @@ public class Player {
     public void setDead(boolean dead) {
         isDead = dead;
     }
-
+    public String toString(){
+        return pName;
+    }
     private PlayerHand ph;
     private boolean isDead;
+    private String pName;
 }

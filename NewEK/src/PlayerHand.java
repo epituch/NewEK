@@ -18,7 +18,6 @@ public class PlayerHand {
             if (!(d.getCard(i).compareTo("Bomb"))){
                 ph.add(d.getCard(i));
                 d.remove(d.getCard(i));
-                System.out.println(size());
             }
 
 
