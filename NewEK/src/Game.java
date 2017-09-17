@@ -35,6 +35,7 @@ public class Game {
 
                         p1.addTurnsRemaining(current.getNextPlayerTurns());
                         p = p1;
+                        current = p1;
                         break;
                     case 2:
                         if(!p1.isDead()){
@@ -49,6 +50,7 @@ public class Game {
 
                         p2.addTurnsRemaining(current.getNextPlayerTurns());
                         p = p2;
+                        current = p2;
                         break;
                     case 3:
                         if(!p2.isDead()){
@@ -63,6 +65,7 @@ public class Game {
 
                         p3.addTurnsRemaining(current.getNextPlayerTurns());
                         p = p3;
+                        current = p3;
                         break;
                     case 4:
                         if(!p3.isDead()){
@@ -77,6 +80,7 @@ public class Game {
 
                         p4.addTurnsRemaining(current.getNextPlayerTurns());
                         p = p4;
+                        current = p4;
                         break;
 
                 }
@@ -86,6 +90,8 @@ public class Game {
                     if(p.getTurnsRemaining() > 0){
                         System.out.println("What card do you want to play");
                         int c = s.nextInt(); s.nextLine();
+                        actions()
+
 
                     }
                 }

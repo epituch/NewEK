@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 import Cards.Card;
 
@@ -39,6 +40,12 @@ public int size(){
     }
     public void remove(Card c) {
         ph.remove(c);
+    }
+    public void shuffle(){
+        Collections.shuffle(ph);
+    }
+    public void addCard(Card c){
+        ph.add(c);
     }
 
     private ArrayList<Card> ph;
