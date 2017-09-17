@@ -28,7 +28,7 @@ public class Game {
                         }
                         else if(!p3.isDead()){
                             current = p3;
-                        }//test
+                        }
                         else{
                             current = p2;
                         }
